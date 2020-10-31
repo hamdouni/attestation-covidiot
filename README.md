@@ -1,4 +1,6 @@
-# Générateur de certificat de déplacement
+# Générateur de certificat de déplacement version compact
+
+![Exemple d'écran de l'application](screen.png)
 
 ## Modifications (Quick & Dirty)
 
@@ -35,7 +37,7 @@ Le code à déployer est dans le dossier `dist`
 
 ## Crédits
 
-Ce projet a été réalisé à partir d'un fork du dépôt [deplacement-covid-19](https://github.com/nesk/deplacement-covid-19) de lui-même réalisé à partir d'un fork du dépôt [covid-19-certificate](https://github.com/nesk/covid-19-certificate) de [Johann Pardanaud](https://github.com/nesk).
+Ce projet a été réalisé à partir d'un fork du dépôt [deplacement-covid-19-q4-2020](https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020) lui même fork de [deplacement-covid-19](https://github.com/LAB-MI/deplacement-covid-19) de lui-même réalisé à partir d'un fork du dépôt [covid-19-certificate](https://github.com/nesk/covid-19-certificate) de [Johann Pardanaud](https://github.com/nesk).
 
 Les projets open source suivants ont été utilisés pour le développement de ce
 service :
@@ -44,3 +46,5 @@ service :
 - [qrcode](https://github.com/soldair/node-qrcode)
 - [Bootstrap](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/license)
+
+Le patch du [LocalStorage](https://github.com/tar-gezed/attestation-deplacement-derogatoire-q4-2020/tree/feature/store-and-autocomplete-data) est de [Quentin Dunand (tar-gezed)](https://github.com/tar-gezed)
