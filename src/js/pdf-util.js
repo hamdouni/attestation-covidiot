@@ -9,7 +9,7 @@ const ys = {
   handicap: 373,
   sport_animaux: 349,
   convocation: 276,
-  missions: 251,
+  missions: 252,
   enfants: 228,
 }
 
@@ -70,10 +70,10 @@ export async function generatePdf (profile, reasons, pdfBase) {
     page1.drawText(text, { x, y, size, font })
   }
 
-  drawText(`${firstname} ${lastname}`, 97, 702)
-  drawText(birthday, 97, 684)
-  drawText(placeofbirth, 220, 684)
-  drawText(`${address} ${zipcode} ${city}`, 110, 666)
+  drawText(`${firstname} ${lastname}`, 92, 702)
+  drawText(birthday, 92, 684)
+  drawText(placeofbirth, 214, 684)
+  drawText(`${address} ${zipcode} ${city}`, 104, 665)
 
   reasons
     .split(', ')
@@ -91,9 +91,9 @@ export async function generatePdf (profile, reasons, pdfBase) {
     locationSize = 7
   }
 
-  drawText(profile.city, 93, 77, locationSize)
-  drawText(`${profile.datesortie}`, 76, 59, 11)
-  drawText(`${profile.heuresortie}`, 246, 59, 11)
+  drawText(profile.city, 78, 76, locationSize)
+  drawText(`${profile.datesortie}`, 63, 58, 11)
+  drawText(`${profile.heuresortie}`, 227, 58, 11)
 
   // const shortCreationDate = `${creationDate.split('/')[0]}/${
   //   creationDate.split('/')[1]
