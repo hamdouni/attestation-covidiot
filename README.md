@@ -8,6 +8,14 @@
 - Réordonne les champs pour avoir le bouton de génération et les motifs en premier
 - Remplace tous les labels des motifs par leur code respectif
 
+## Usage
+
+__Stock__ : cocher la case pour enregistrer les données dans le stockage local du navigateur.
+
+__Clean__ : efface les données du stockage local. (avertissement pour confirmer cette action)
+
+__Refresh__ : pour raffraîchir le contenu du formulaire (notamment ré-actualise date et heure)
+
 ## Docs
 
 Pour installer toutes les dépendances :
