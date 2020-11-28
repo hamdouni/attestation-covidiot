@@ -1,35 +1,37 @@
 # Générateur de certificat de déplacement
 
-## Développer
+## Modifications (Quick & Dirty)
 
-### Installer le projet
+- Ajoute patch localstorage pour enregistrer les données dans le navigateur
+- Réordonne les champs pour avoir le bouton de génération et les motifs en premier
+- Remplace tous les labels des motifs par leur code respectif
+
+## Docs
+
+Pour installer toutes les dépendances :
 
 ```console
-git clone https://github.com/LAB-MI/attestation-deplacement-derogatoire-q4-2020.git
-cd attestation-deplacement-derogatoire-q4-2020
 npm i
+```
+
+Pour développer et tester avec rechargement automatique :
+
+```console
 npm start
 ```
 
-## Générer et tester le code de production
+(Visitez http://localhost:1234)
 
-### Tester le code de production en local
-
-#### Générer le code de production pour tester que le build fonctionne en entier
+Générer et tester le code de production
 
 ```console
 npm run build:dev
-```
-
-#### Tester le code de production en local
-
-```console
 npx serve dist
 ```
 
-Et visiter http://localhost:5000
+(Visiter http://localhost:5000)
 
-Le code à déployer sera le contenu du dossier `dist`
+Le code à déployer est dans le dossier `dist`
 
 ## Crédits
 

@@ -11,7 +11,6 @@ const createTitle = () => {
   const p = createElement('p', { className: 'msg-info', innerHTML: 'Tous les champs sont obligatoires.' })
   return [h2, p]
 }
-// createElement('div', { className: 'form-group' })
 
 const createFormGroup = ({
   autocomplete = false,
@@ -76,12 +75,12 @@ const createFormGroup = ({
 
 const createReasonField = (reasonData) => {
   const formReasonAttrs = { className: 'form-checkbox align-items-center' }
-  const formReason = createElement('div', formReasonAttrs)
+  const formReason = createElement('span', formReasonAttrs)
   const appendToReason = appendTo(formReason)
 
   const id = `checkbox-${reasonData.code}`
   const inputReasonAttrs = {
-    className: 'form-check-input',
+    className: 'mr-2 ml-2',
     type: 'checkbox',
     id,
     name: 'field-reason',
@@ -89,7 +88,7 @@ const createReasonField = (reasonData) => {
   }
   const inputReason = createElement('input', inputReasonAttrs)
 
-  const labelAttrs = { innerHTML: reasonData.label, className: 'form-checkbox-label', for: id }
+  const labelAttrs = { innerHTML: reasonData.code, className: 'form-checkbox-label', for: id }
   const label = createElement('label', labelAttrs)
 
   appendToReason([inputReason, label])
@@ -107,7 +106,7 @@ const createReasonFieldset = (reasonsData) => {
 
   const legendAttrs = {
     className: 'legend titre-3',
-    innerHTML: 'Choisissez un motif de déplacement',
+    innerHTML: 'Motif de déplacement',
   }
   const legend = createElement('legend', legendAttrs)
 
@@ -115,14 +114,14 @@ const createReasonFieldset = (reasonsData) => {
   const textAlert = createElement('p', textAlertAttrs)
 
   const textSubscribeReasonAttrs = {
-    innerHTML: 'certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l\'épidémie de Covid19 dans le cadre de l\'état d\'urgence sanitaire  <a class="footnote" href="#footnote1">[1]</a>&nbsp;:',
+    innerHTML: '',
   }
 
   const textSubscribeReason = createElement('p', textSubscribeReasonAttrs)
 
   const reasonsFields = reasonsData.items.map(createReasonField)
 
-  appendToFieldset([legend, textAlert, textSubscribeReason, ...reasonsFields])
+  appendToFieldset([textAlert, textSubscribeReason, ...reasonsFields])
   // Créer un form-checkbox par motif
   return fieldset
 }
@@ -156,5 +155,5 @@ export function createForm () {
     .find(field => field.key === 'reason')
 
   const reasonFieldset = createReasonFieldset(reasonsData)
-  appendToForm([...createTitle(), ...formFirstPart, reasonFieldset])
+  appendToForm([reasonFieldset, ...formFirstPart])
 }
