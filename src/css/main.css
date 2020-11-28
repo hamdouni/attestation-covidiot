@@ -673,3 +673,8 @@ input[type=number] {
 .fieldset-error {
   border: 3px solid red;
 }
+
+fieldset#reason-fieldset {
+  display: flex;
+  flex-flow: wrap;
+}
